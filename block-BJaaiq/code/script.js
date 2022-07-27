@@ -1,12 +1,20 @@
 let quotesElm = document.querySelector(".quotes");
-for (let i = 0; i < 3; i++) {
-    let quote = document.createElement("blockquote");
-    quote.innerText = quotes[i].quoteText;
-    let quoteAuthor = document.createElement("cite");
-    quoteAuthor.innerText = quotes[i].quoteAuthor;
-    quotesElm.append(quote, quoteAuthor);
-}
 
+let max = 3;
+let index = 0;
+
+function addQuotes() {
+    for (let i = 0; i < max; i++) {
+        let quote = document.createElement("blockquote");
+        quote.innerText = quotes[index].quoteText;
+        let quoteAuthor = document.createElement("cite");
+        quoteAuthor.innerText = quotes[index].quoteAuthor;
+        quotesElm.append(quote, quoteAuthor);
+        index++;
+
+    }
+}
+addQuotes()
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,12 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 window.addEventListener("scroll", () => {
-    quotes.forEach((elm) => {
-        let quote = document.createElement("blockquote");
-        quote.innerText = elm.quoteText;
-        let quoteAuthor = document.createElement("cite");
-        quoteAuthor.innerText = elm.quoteAuthor;
-        quotesElm.append(quote, quoteAuthor);
-    });
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight;
+    let clientHeight = document.documentElement.clientHeight;
+    if(scrollTop + clientHeight >= scrollHeight && index < quotes.length){
+        addQuotes();
+    }
     
 });
