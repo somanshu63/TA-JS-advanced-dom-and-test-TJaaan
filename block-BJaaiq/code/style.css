@@ -1,0 +1,19 @@
+.quotes{
+    width: 500px;
+    margin: 5rem auto;
+}
+.showscroll{
+    margin: 5rem;
+    float: left;
+    text-align: center;
+    position: fixed;
+}
+blockquote{
+    list-style: circle;
+    font-size: 40px;
+    font-style: italic;
+    margin: 4rem 0 1rem 0;
+}
+cite{
+    font-size: 18px;
+}

@@ -1,0 +1,74 @@
+body{
+    background-color: blue;
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem;
+    font-weight: 400;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    margin: 3rem auto;
+}
+.center{
+    margin: 0 auto;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    color: white;
+}
+.input{
+    padding: 8px;
+    border: 1px solid white;
+}
+.input-control{
+    background-color: blue;
+    font-size: 18px;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+}
+.input-control::placeholder{
+    color: whitesmoke;
+}
+.list li{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    background-color: white;
+    color: blue;
+    padding: 12px;
+    margin: 8px 25px;
+    vertical-align: middle;
+}
+.list li:hover span{
+    display: inline-block;
+}
+li span{
+    font-size: 12px;
+    text-transform: capitalize;
+    display: none;
+}
+.dropzone.dragover {
+    transform: scale(1.2);
+}
+  
+.dragging {
+    opacity: .5;
+}
+.dropzone {
+    background: blueviolet;
+}
